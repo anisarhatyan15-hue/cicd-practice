@@ -17,7 +17,7 @@ jobs:
           run: python3 --version
 
         - name: Run system health checks
-          run: |
+    ru: |
               echo " Starting CI workflow..."
               echo "Current directory:"
               pwd
