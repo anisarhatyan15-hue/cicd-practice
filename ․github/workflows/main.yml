@@ -1,26 +1,17 @@
 name: CI pipeline
+
 on:
   push:
-      branches: [ "main" ]
-  pull_request:
-      branches: [ "main" ]
+    branches: [ "main" ]
 
 jobs:
-   test-and-build:
-     runs-on: ubuntu-latest
+  test-and-build:
+    runs-on: ubuntu-latest
 
-     steps:
-        - name: Checkout repository code
-          uses: actions/checkout@v4
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
 
-        - name: Check Python installation
-          run: python3 --version
-
-        - name: Run system health checks
-          run: |
-              echo " Starting CI workflow..."
-              echo "Current directory:"
-              pwd
-              echo "Available memory:"
-              free -h
-              echo "CI Checks Completed Successfully!"
+      - name: Run system health checks
+        run: |
+          echo "This syntax error is now fixed!"
